@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>CARR Lab | Research</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -14,21 +15,22 @@
   --bg:#FFFFFF;--bg-alt:#F7F8FA;--bg-hero:#EEF2F7;
   --text:#2C2C2C;--text-sec:#5A5A5A;--text-muted:#8A8A8A;
   --border:#DDE3EA;--border-light:#EDF0F4;
-  --sans:'Inter',-apple-system,Helvetica,Arial,sans-serif;--serif:'Noto Serif',Georgia,serif;
+  --sans:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;--serif:'Source Serif 4',Georgia,serif;
   --max-w:1060px;
-  --fs-h1:2.1rem;--fs-h2:1.55rem;--fs-h3:1.15rem;
-  --fs-body:1.02rem;--fs-small:0.92rem;
+  --fs-hero:2.2rem;--fs-h1:2.08rem;--fs-h2:1.55rem;--fs-h3:1.24rem;
+  --fs-body:1rem;--fs-small:0.9rem;--fs-xs:0.78rem;--fs-avatar:1.3rem;
   --lh:1.75;--section-pad:52px 24px;
 }
 html{scroll-behavior:smooth;font-size:16px}
 body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:var(--lh)}
+h1,h2,h3{line-height:1.25}
 a{color:var(--primary);text-decoration:none}
 a:hover{color:var(--gold);text-decoration:underline}
 
 /* NAV */
 nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px 6px rgba(0,0,0,0.1)}
 .nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:56px}
-.nav-logo{color:#fff;font-size:1.15rem;font-weight:700;letter-spacing:0.02em;text-decoration:none}
+.nav-logo{color:#fff;font-size:1.18rem;font-weight:700;letter-spacing:0.02em;text-decoration:none}
 .nav-logo span{color:var(--gold)}
 .nav-links{display:flex;gap:4px;list-style:none}
 .nav-links a{color:rgba(255,255,255,0.82);font-size:var(--fs-small);font-weight:500;padding:6px 12px;border-radius:4px;transition:all 0.2s;text-decoration:none}
@@ -44,7 +46,7 @@ nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px
 /* HERO */
 .hero{background:var(--bg-hero);padding:48px 24px 44px;border-bottom:1px solid var(--border)}
 .hero-inner{max-width:var(--max-w);margin:0 auto}
-.hero h1{font-family:var(--serif);font-size:2.2rem;font-weight:700;line-height:1.25;margin-bottom:20px;color:var(--primary)}
+.hero h1{font-family:var(--serif);font-size:var(--fs-hero);font-weight:700;line-height:1.25;margin-bottom:20px;color:var(--primary)}
 .hero-body{display:grid;grid-template-columns:1fr 320px;gap:36px;align-items:start}
 .hero-text p{font-size:var(--fs-body);color:var(--text-sec);line-height:var(--lh);margin-bottom:12px}
 .hero-text p:last-child{margin-bottom:0}
@@ -55,7 +57,7 @@ nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px
 .section-alt{background:var(--bg-alt)}
 .container{max-width:var(--max-w);margin:0 auto}
 .section h2{font-family:var(--serif);font-size:var(--fs-h2);font-weight:700;color:var(--primary);margin-bottom:20px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
-.section h3{font-size:var(--fs-h3);font-weight:600;color:var(--text);margin-bottom:6px}
+.section h3{font-family:var(--serif);font-size:var(--fs-h3);font-weight:600;color:var(--text);margin-bottom:6px}
 .section p{font-size:var(--fs-body);color:var(--text-sec);margin-bottom:10px}
 
 /* RESEARCH LIST */
@@ -78,11 +80,11 @@ nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:start}
 .about-photo{width:200px;height:260px;border-radius:6px;background:linear-gradient(135deg,var(--border),var(--border-light));display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:var(--fs-small);text-align:center;border:1px solid var(--border)}
-.about-text h2{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--primary);margin-bottom:4px;border:none;padding:0;display:block}
+.about-text h2{font-family:var(--serif);font-size:var(--fs-h2);font-weight:700;color:var(--primary);margin-bottom:4px;border:none;padding:0;display:block}
 .about-text .position{font-size:var(--fs-body);color:var(--text-sec);margin-bottom:16px}
 .about-text p{font-size:var(--fs-body);line-height:var(--lh)}
 .detail-section{margin-top:20px}
-.detail-section h3{font-size:var(--fs-small);font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;margin-top:20px;border:none;padding:0}
+.detail-section h3{font-family:var(--serif);font-size:var(--fs-h3);font-weight:600;color:var(--primary);margin-bottom:8px;margin-top:20px;border:none;padding:0}
 .detail-section ul{list-style:none;margin-bottom:8px}
 .detail-section li{font-size:var(--fs-body);color:var(--text-sec);padding:3px 0 3px 18px;position:relative}
 .detail-section li::before{content:'';position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--gold)}
@@ -90,13 +92,13 @@ nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px
 /* RESEARCH */
 .research-block{margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid var(--border-light)}
 .research-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.research-block h3{font-size:var(--fs-h3);color:var(--primary);font-weight:600;margin-bottom:8px}
+.research-block h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);font-weight:600;margin-bottom:8px}
 .research-block p{font-size:var(--fs-body);line-height:var(--lh)}
 .keywords{margin-top:8px;font-size:var(--fs-small);color:var(--text-muted);font-style:italic}
 
 /* PUBLICATIONS */
 .pub-section{margin-bottom:32px}
-.pub-section h3{font-size:var(--fs-small);font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border-light);display:block}
+.pub-section h3{font-family:var(--serif);font-size:var(--fs-h3);font-weight:700;color:var(--primary);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border-light);display:block}
 .pub-item{padding:8px 0;font-size:var(--fs-body);color:var(--text-sec);line-height:var(--lh);border-bottom:1px solid var(--border-light)}
 .pub-item:last-child{border-bottom:none}
 .pub-item strong{color:var(--text);font-weight:600}
@@ -106,48 +108,51 @@ nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px
 /* TEAM */
 .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:20px;margin-top:12px}
 .team-card{text-align:center}
-.team-avatar{width:100px;height:100px;border-radius:50%;margin:0 auto 10px;background:linear-gradient(135deg,var(--border),var(--border-light));display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--text-muted);font-weight:600;border:2px solid var(--border)}
+.team-avatar{width:100px;height:100px;border-radius:50%;margin:0 auto 10px;background:linear-gradient(135deg,var(--border),var(--border-light));display:flex;align-items:center;justify-content:center;font-size:var(--fs-avatar);color:var(--text-muted);font-weight:600;border:2px solid var(--border)}
 .team-card h4{font-size:var(--fs-body);font-weight:600;margin-bottom:2px}
 .team-card p{font-size:var(--fs-small);color:var(--text-muted)}
-.team-subtitle{font-size:var(--fs-body);font-weight:700;color:var(--primary);margin-top:28px;margin-bottom:12px}
+.team-subtitle{font-family:var(--serif);font-size:var(--fs-body);font-weight:700;color:var(--primary);margin-top:28px;margin-bottom:12px}
 .member-list{list-style:none}
 .member-list li{font-size:var(--fs-body);color:var(--text-sec);padding:3px 0 3px 18px;position:relative}
 .member-list li::before{content:'';position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--gold)}
 .join-box{margin-top:32px;padding:24px;background:var(--bg-alt);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:4px}
-.join-box h3{font-size:var(--fs-h3);color:var(--primary);margin-bottom:6px}
+.join-box h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);margin-bottom:6px}
 .join-box p{font-size:var(--fs-body);color:var(--text-sec);margin:0}
 
 /* TEACHING */
 .course-item{padding:18px 0;border-bottom:1px solid var(--border-light)}
 .course-item:last-child{border-bottom:none}
-.course-level{display:inline-block;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--primary);padding:2px 8px;border-radius:3px;margin-bottom:4px}
-.course-item h3{font-size:var(--fs-h3);font-weight:600;margin-bottom:2px}
+.course-level{display:inline-block;font-size:var(--fs-xs);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--primary);padding:2px 8px;border-radius:3px;margin-bottom:4px}
+.course-item h3{font-family:var(--serif);font-size:var(--fs-h3);font-weight:600;margin-bottom:2px}
 .course-item .semesters{font-size:var(--fs-small);color:var(--text-muted);margin-bottom:6px}
 .course-item p{font-size:var(--fs-body);color:var(--text-sec)}
 
 /* CONTACT / OPPORTUNITIES */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.contact-info h3{font-family:var(--serif);font-size:1.2rem;color:var(--primary);margin-bottom:18px}
+.contact-info h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);margin-bottom:18px}
 .contact-row{display:flex;gap:12px;margin-bottom:12px;align-items:start}
 .contact-label{font-size:var(--fs-small);font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;min-width:56px}
 .contact-val{font-size:var(--fs-body);color:var(--text-sec)}
 .contact-val a{color:var(--primary)}
 .opp-box{padding:24px;background:var(--bg-alt);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:4px;margin-bottom:20px}
-.opp-box h3{font-size:var(--fs-h3);color:var(--primary);margin-bottom:6px}
+.opp-box h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);margin-bottom:6px}
 .opp-box p{font-size:var(--fs-body);color:var(--text-sec);line-height:var(--lh);margin:0 0 8px}
 .opp-box p:last-child{margin-bottom:0}
 
 /* FOOTER */
-footer{background:var(--primary);color:rgba(255,255,255,0.6);padding:36px 24px;font-size:var(--fs-small)}
-.footer-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+footer{background:var(--primary);color:rgba(255,255,255,0.6);padding:32px 24px;font-size:var(--fs-small)}
+.footer-inner{max-width:var(--max-w);margin:0 auto;text-align:center}
+footer a{color:rgba(255,255,255,0.78);text-decoration:none}
+footer a:hover{color:#fff;text-decoration:none}
 .footer-links{list-style:none}
 .footer-links li{margin-bottom:4px}
 .footer-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:var(--fs-small)}
 .footer-links a:hover{color:#fff;text-decoration:none}
-.footer-bottom{max-width:var(--max-w);margin:16px auto 0;padding-top:12px;border-top:1px solid rgba(255,255,255,0.12);text-align:center;font-size:0.78rem;color:rgba(255,255,255,0.35)}
+.footer-bottom{max-width:var(--max-w);margin:16px auto 0;padding-top:12px;border-top:1px solid rgba(255,255,255,0.12);text-align:center;font-size:var(--fs-xs);color:rgba(255,255,255,0.35)}
 
 /* RESPONSIVE */
 @media(max-width:768px){
+  :root{--fs-hero:2rem;--fs-h1:1.88rem;--fs-h2:1.4rem;--fs-h3:1.14rem;--fs-body:0.98rem;--fs-small:0.88rem;}
   .nav-links{display:none}
   .nav-links.open{display:flex;flex-direction:column;position:absolute;top:56px;left:0;right:0;background:var(--primary);padding:16px 24px;gap:4px}
   .hamburger{display:block}
@@ -156,7 +161,6 @@ footer{background:var(--primary);color:rgba(255,255,255,0.6);padding:36px 24px;f
   .about-grid{grid-template-columns:1fr}
   .about-photo{width:160px;height:200px}
   .contact-grid{grid-template-columns:1fr}
-  .footer-inner{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -183,8 +187,8 @@ footer{background:var(--primary);color:rgba(255,255,255,0.6);padding:36px 24px;f
 <div class="section">
   <div class="container">
     <div class="research-block">
-      <h3>Surrogate Modeling and Machine Learning for Analysis and Design of Complex Engineering Systems</h3>
-      <p>Complex engineering simulations are often too expensive to run repeatedly for tasks like reliability analysis, sensitivity analysis, and design optimization. We develop surrogate modeling and machine learning methods that make these tasks computationally feasible while maintaining accuracy. Our work addresses fundamental challenges in this area, including how to effectively combine data of different fidelity levels, how to learn from limited or censored observations, how to incorporate physics constraints, and how to capture complex input-output relationships in high-dimensional problems. We draw on Gaussian process modeling, deep learning, and stochastic simulation as core methodological tools, and we continue to expand our methods to new settings as computational demands grow.</p>
+      <h3>Surrogate Modeling and Machine Learning for Engineering Analysis and Design</h3>
+      <p>Complex engineering simulations are often too expensive to run repeatedly for tasks like reliability analysis, sensitivity analysis, and design optimization. We develop surrogate modeling and machine learning methods that make these tasks computationally feasible while maintaining accuracy. Our work addresses fundamental challenges in this area, including how to effectively combine data of different fidelity levels, how to learn from limited or censored observations, how to incorporate physics constraints, and how to capture complex input-output relationships in high-dimensional problems. We draw on Gaussian process modeling, deep learning, and advanced stochastic simulation as core methodological tools, and we continue to expand our methods to new settings as computational demands grow.</p>
       <div style="margin-top:12px;padding:16px;background:var(--bg-alt);border:1px dashed var(--border);border-radius:4px;color:var(--text-muted);font-size:var(--fs-small);text-align:center;">[Research illustration placeholder]</div>
       <p class="keywords">Keywords: Gaussian process, multi-fidelity modeling, variational LSTM, physics-constrained surrogates, dimension reduction, limited data, high-dimensionality</p>
     </div>
@@ -195,7 +199,7 @@ footer{background:var(--primary);color:rgba(255,255,255,0.6);padding:36px 24px;f
     </div>
     <div class="research-block">
       <h3>Infrastructure Risk Assessment and Risk-informed Decision Making</h3>
-      <p>Understanding how natural hazards affect large-scale infrastructure networks and making sound decisions to reduce that risk requires methods that can operate at the system level. We develop computational frameworks for network-level risk assessment, integrating multi-source data and Bayesian inference to estimate system states from partial observations. Our work spans hazard types including earthquakes and hurricanes, and infrastructure types including transportation networks and bridges. We are particularly interested in how risk insights can be translated into actionable decisions, such as bridge maintenance planning, retrofit prioritization, and resource allocation, with attention to both efficiency and equity.</p>
+      <p>Understanding how natural hazards affect large-scale infrastructure networks and making sound decisions to reduce that risk requires methods that can operate at the system level. We develop computational frameworks for network-level risk assessment, integrating multi-source data and Bayesian inference to estimate system states from partial observations. Our work spans hazard types including earthquakes, hurricanes, and pluvial flooding, and infrastructure types including transportation networks and power systems. We are particularly interested in how risk insights can be translated into actionable decisions, such as bridge maintenance planning, retrofit prioritization, and resource allocation, with attention to both efficiency and equity.</p>
       <p class="keywords">Keywords: seismic risk, hurricane wind risk, transportation networks, bridge deterioration, Bayesian updating, graph neural networks, retrofit prioritization, equity-aware planning</p>
     </div>
     <div class="research-block">
@@ -209,23 +213,19 @@ footer{background:var(--primary);color:rgba(255,255,255,0.6);padding:36px 24px;f
 <footer>
   <div class="footer-inner">
     <div>
-      <p style="font-size:1rem;color:#fff;font-weight:700;margin-bottom:8px;">CARR Lab</p>
-      <p>Computation and AI for<br>Risk and Resilience</p>
-      <p style="margin-top:6px;">Department of Civil &amp; Environmental Engineering<br>Rensselaer Polytechnic Institute</p>
-    </div>
-    <div>
       <p style="color:#fff;font-weight:600;margin-bottom:8px;">Quick Links</p>
       <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="publication.html">Publications</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="https://cee.rpi.edu">RPI CEE</a></li>
+        <li><a href="https://faculty.rpi.edu/min-li">Min Li Faculty Profile</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">&copy; 2025 CARR Lab. All rights reserved.</div>
 </footer>
-<script>document.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("navLinks").classList.remove("open")})});</script>
+<script>
+  document.querySelectorAll(".nav-links a").forEach(function(a){
+    a.addEventListener("click",function(){document.getElementById("navLinks").classList.remove("open")});
+  });
+</script>
 </body>
 </html>
