@@ -94,6 +94,8 @@ nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px
 .research-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .research-block h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);font-weight:600;margin-bottom:8px}
 .research-block p{font-size:var(--fs-body);line-height:var(--lh)}
+.research-image{display:block;width:100%;max-width:760px;margin:18px auto 14px}
+.research-image-compact{width:auto;max-width:100%;max-height:520px}
 .keywords{margin-top:8px;font-size:var(--fs-small);color:var(--text-muted);font-style:italic}
 
 /* PUBLICATIONS */
@@ -189,17 +191,19 @@ footer a:hover{color:#fff;text-decoration:none}
     <div class="research-block">
       <h3>Surrogate Modeling and Machine Learning for Engineering Analysis and Design</h3>
       <p>Complex engineering simulations are often too expensive to run repeatedly for tasks like reliability analysis, sensitivity analysis, and design optimization. We develop surrogate modeling and machine learning methods that make these tasks computationally feasible while maintaining accuracy. Our work addresses fundamental challenges in this area, including how to effectively combine data of different fidelity levels, how to learn from limited or censored observations, how to incorporate physics constraints, and how to capture complex input-output relationships in high-dimensional problems. We draw on Gaussian process modeling, deep learning, and advanced stochastic simulation as core methodological tools, and we continue to expand our methods to new settings as computational demands grow.</p>
-      <div style="margin-top:12px;padding:16px;background:var(--bg-alt);border:1px dashed var(--border);border-radius:4px;color:var(--text-muted);font-size:var(--fs-small);text-align:center;">[Research illustration placeholder]</div>
-      <p class="keywords">Keywords: Gaussian process, multi-fidelity modeling, variational LSTM, physics-constrained surrogates, dimension reduction, limited data, high-dimensionality</p>
+      <img class="research-image" src="assets/research1.png" alt="Surrogate modeling and machine learning research illustration">
+      <p class="keywords">Keywords: Gaussian process, multi-fidelity modeling, physics-constrained surrogates, dimension reduction, limited data, high-dimensionality</p>
     </div>
     <div class="research-block">
       <h3>Forward and Inverse Uncertainty Quantification</h3>
-      <p>Engineering systems are subject to various sources of uncertainty, and quantifying their effects is essential for reliable analysis and design. Our work in forward UQ focuses on efficiently propagating input uncertainties through complex models to estimate output statistics, failure probabilities, and sensitivity indices. In inverse UQ, we develop methods for calibrating model parameters and updating predictions using observational data through Bayesian inference frameworks. By leveraging surrogate models and advanced sampling techniques, we make these computationally demanding tasks feasible for real-world engineering applications, including the estimation of small failure probabilities and global sensitivity analysis for systems with high-dimensional outputs.</p>
+      <p>Engineering systems are subject to various sources of uncertainty, and quantifying their effects is essential for reliable analysis and design. Our work in forward UQ focuses on efficiently propagating input uncertainties through complex models to estimate output statistics, failure probabilities, and sensitivity indices. In inverse UQ, we develop methods for calibrating model parameters and updating predictions using observational data through Bayesian inference frameworks. By leveraging surrogate models and advanced sampling techniques, we make these computationally demanding tasks feasible for real-world engineering applications.</p>
+      <img class="research-image" src="assets/research2.svg" alt="Forward and inverse uncertainty quantification research illustration">
       <p class="keywords">Keywords: reliability analysis, stochastic simulation, subset simulation, Bayesian inference, Bayesian updating, sensitivity analysis, small failure probabilities</p>
     </div>
     <div class="research-block">
       <h3>Infrastructure Risk Assessment and Risk-informed Decision Making</h3>
-      <p>Understanding how natural hazards affect large-scale infrastructure networks and making sound decisions to reduce that risk requires methods that can operate at the system level. We develop computational frameworks for network-level risk assessment, integrating multi-source data and Bayesian inference to estimate system states from partial observations. Our work spans hazard types including earthquakes, hurricanes, and pluvial flooding, and infrastructure types including transportation networks and power systems. We are particularly interested in how risk insights can be translated into actionable decisions, such as bridge maintenance planning, retrofit prioritization, and resource allocation, with attention to both efficiency and equity.</p>
+      <p>Understanding how natural hazards affect large-scale infrastructure networks and making sound decisions to reduce that risk requires methods that can operate at the system level. We develop scalable computational frameworks for network-level risk assessment. Our work spans hazard types including earthquakes, hurricanes, and flooding, and infrastructure types including transportation networks and power systems. We are particularly interested in how risk insights can be translated into actionable decisions, such as bridge maintenance planning, retrofit prioritization, and resource allocation.</p>
+      <img class="research-image research-image-compact" src="assets/research3.png" alt="Infrastructure risk assessment and risk-informed decision making research illustration">
       <p class="keywords">Keywords: seismic risk, hurricane wind risk, transportation networks, bridge deterioration, Bayesian updating, graph neural networks, retrofit prioritization, equity-aware planning</p>
     </div>
     <div class="research-block">
