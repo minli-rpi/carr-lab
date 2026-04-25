@@ -6,19 +6,19 @@
 <title>CARR Lab | Research</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --primary:#2B4C7E;--primary-light:#3D6098;--primary-dark:#1E3A5F;
-  --gold:#C7944A;--gold-light:#E8D5B0;
-  --bg:#FFFFFF;--bg-alt:#F7F8FA;--bg-hero:#EEF2F7;
-  --text:#2C2C2C;--text-sec:#5A5A5A;--text-muted:#8A8A8A;
-  --border:#DDE3EA;--border-light:#EDF0F4;
-  --sans:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;--serif:'Source Serif 4',Georgia,serif;
+  --primary:#2F5688;--primary-light:#4D6FA3;--primary-dark:#25476F;
+  --gold:#C6923E;--gold-light:#E6C98D;
+  --bg:#FFFFFF;--bg-alt:#F8FAFC;--bg-hero:#EAF0F7;
+  --text:#2B2F36;--text-sec:#5D5D5D;--text-muted:#8A8F98;
+  --border:#DDE5EF;--border-light:#EDF1F6;
+  --sans:'IBM Plex Sans',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;--serif:'Source Serif 4',Georgia,serif;
   --max-w:1060px;
-  --fs-hero:2.2rem;--fs-h1:2.08rem;--fs-h2:1.55rem;--fs-h3:1.24rem;
-  --fs-body:1rem;--fs-small:0.9rem;--fs-xs:0.78rem;--fs-avatar:1.3rem;
+  --fs-hero:2.12rem;--fs-h1:1.98rem;--fs-h2:1.56rem;--fs-h3:1.3rem;
+  --fs-body:1.02rem;--fs-small:0.91rem;--fs-xs:0.77rem;--fs-avatar:1.24rem;
   --lh:1.75;--section-pad:52px 24px;
 }
 html{scroll-behavior:smooth;font-size:16px}
@@ -28,13 +28,13 @@ a{color:var(--primary);text-decoration:none}
 a:hover{color:var(--gold);text-decoration:underline}
 
 /* NAV */
-nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px 6px rgba(0,0,0,0.1)}
+nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(47,86,136,0.18)}
 .nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:56px}
-.nav-logo{color:#fff;font-size:1.18rem;font-weight:700;letter-spacing:0.02em;text-decoration:none}
-.nav-logo span{color:var(--gold)}
+.nav-logo{color:#fff;font-size:1.18rem;font-weight:700;letter-spacing:0;text-decoration:none}
+.nav-logo span{color:var(--gold-light)}
 .nav-links{display:flex;gap:4px;list-style:none}
 .nav-links a{color:rgba(255,255,255,0.82);font-size:var(--fs-small);font-weight:500;padding:6px 12px;border-radius:4px;transition:all 0.2s;text-decoration:none}
-.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,0.12);text-decoration:none}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,0.14);text-decoration:none}
 .hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .hamburger span{display:block;width:22px;height:2px;background:#fff;margin:5px 0}
 
@@ -68,7 +68,7 @@ nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px
 /* NEWS */
 .news-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border-light);align-items:start}
 .news-item:last-child{border-bottom:none}
-.news-date-box{min-width:56px;text-align:center;background:var(--primary);color:#fff;border-radius:4px;padding:6px 10px}
+.news-date-box{min-width:68px;text-align:center;background:var(--primary);color:#fff;border-radius:4px;padding:6px 10px}
 .news-date-box .year{font-size:var(--fs-body);font-weight:700}
 .news-content h3{font-size:var(--fs-body);font-weight:600;color:var(--text);margin-bottom:2px}
 .news-content p{font-size:var(--fs-small);color:var(--text-sec);margin:0}
@@ -92,11 +92,13 @@ nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px
 /* RESEARCH */
 .research-block{margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid var(--border-light)}
 .research-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.research-block h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);font-weight:600;margin-bottom:8px}
+.research-block h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);font-weight:700;margin-bottom:8px}
 .research-block p{font-size:var(--fs-body);line-height:var(--lh)}
-.research-image{display:block;width:100%;max-width:760px;margin:18px auto 14px}
-.research-image-compact{width:auto;max-width:100%;max-height:520px}
+.research-image{display:block;width:100%;max-width:560px;margin:18px auto 14px}
+.research-image-compact{width:auto;max-width:100%;max-height:420px}
+.research-image-large{max-width:620px}
 .keywords{margin-top:8px;font-size:var(--fs-small);color:var(--text-muted);font-style:italic}
+.keywords strong{font-weight:700;color:var(--text-sec)}
 
 /* PUBLICATIONS */
 .pub-section{margin-bottom:32px}
@@ -118,31 +120,31 @@ nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px
 .member-list li{font-size:var(--fs-body);color:var(--text-sec);padding:3px 0 3px 18px;position:relative}
 .member-list li::before{content:'';position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--gold)}
 .join-box{margin-top:32px;padding:24px;background:var(--bg-alt);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:4px}
-.join-box h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);margin-bottom:6px}
+.join-box h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);font-weight:700;margin-bottom:6px}
 .join-box p{font-size:var(--fs-body);color:var(--text-sec);margin:0}
 
 /* TEACHING */
 .course-item{padding:18px 0;border-bottom:1px solid var(--border-light)}
 .course-item:last-child{border-bottom:none}
-.course-level{display:inline-block;font-size:var(--fs-xs);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--primary);padding:2px 8px;border-radius:3px;margin-bottom:4px}
-.course-item h3{font-family:var(--serif);font-size:var(--fs-h3);font-weight:600;margin-bottom:2px}
+.course-level{display:inline-block;font-size:var(--fs-xs);font-weight:700;letter-spacing:0;text-transform:uppercase;color:#fff;background:var(--primary);padding:2px 8px;border-radius:3px;margin-bottom:4px}
+.course-item h3{font-family:var(--serif);font-size:var(--fs-h3);font-weight:700;color:var(--primary);margin-bottom:2px}
 .course-item .semesters{font-size:var(--fs-small);color:var(--text-muted);margin-bottom:6px}
 .course-item p{font-size:var(--fs-body);color:var(--text-sec)}
 
 /* CONTACT / OPPORTUNITIES */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.contact-info h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);margin-bottom:18px}
+.contact-info h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);font-weight:700;margin-bottom:18px}
 .contact-row{display:flex;gap:12px;margin-bottom:12px;align-items:start}
-.contact-label{font-size:var(--fs-small);font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;min-width:56px}
+.contact-label{font-size:var(--fs-small);font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0;min-width:56px}
 .contact-val{font-size:var(--fs-body);color:var(--text-sec)}
 .contact-val a{color:var(--primary)}
 .opp-box{padding:24px;background:var(--bg-alt);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:4px;margin-bottom:20px}
-.opp-box h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);margin-bottom:6px}
+.opp-box h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);font-weight:700;margin-bottom:6px}
 .opp-box p{font-size:var(--fs-body);color:var(--text-sec);line-height:var(--lh);margin:0 0 8px}
 .opp-box p:last-child{margin-bottom:0}
 
 /* FOOTER */
-footer{background:var(--primary);color:rgba(255,255,255,0.6);padding:32px 24px;font-size:var(--fs-small)}
+footer{background:var(--primary-dark);color:rgba(255,255,255,0.6);padding:32px 24px;font-size:var(--fs-small)}
 .footer-inner{max-width:var(--max-w);margin:0 auto;text-align:center}
 footer a{color:rgba(255,255,255,0.78);text-decoration:none}
 footer a:hover{color:#fff;text-decoration:none}
@@ -160,6 +162,8 @@ footer a:hover{color:#fff;text-decoration:none}
   .hamburger{display:block}
   .hero-body{grid-template-columns:1fr}
   .hero-img{max-width:280px}
+  .research-image{max-width:100%}
+  .research-image-compact{max-height:320px}
   .about-grid{grid-template-columns:1fr}
   .about-photo{width:160px;height:200px}
   .contact-grid{grid-template-columns:1fr}
@@ -190,26 +194,27 @@ footer a:hover{color:#fff;text-decoration:none}
   <div class="container">
     <div class="research-block">
       <h3>Surrogate Modeling and Machine Learning for Engineering Analysis and Design</h3>
-      <p>Complex engineering simulations are often too expensive to run repeatedly for tasks like reliability analysis, sensitivity analysis, and design optimization. We develop surrogate modeling and machine learning methods that make these tasks computationally feasible while maintaining accuracy. Our work addresses fundamental challenges in this area, including how to effectively combine data of different fidelity levels, how to learn from limited or censored observations, how to incorporate physics constraints, and how to capture complex input-output relationships in high-dimensional problems. We draw on Gaussian process modeling, deep learning, and advanced stochastic simulation as core methodological tools, and we continue to expand our methods to new settings as computational demands grow.</p>
-      <img class="research-image" src="assets/research1.png" alt="Surrogate modeling and machine learning research illustration">
-      <p class="keywords">Keywords: Gaussian process, multi-fidelity modeling, physics-constrained surrogates, dimension reduction, limited data, high-dimensionality</p>
+      <p>Complex engineering simulations are often too expensive to run repeatedly for tasks like reliability analysis, sensitivity analysis, and design optimization. We develop surrogate modeling and machine learning methods that make these tasks computationally feasible while maintaining accuracy. Our work addresses fundamental challenges in this area, including how to effectively combine data of different fidelity levels, how to learn from limited or censored observations, how to incorporate physics constraints, and how to capture complex input-output relationships in high-dimensional problems.</p>
+      <img class="research-image research-image-large" src="assets/research1.png" alt="Surrogate modeling and machine learning research illustration">
+      <p class="keywords"><strong>Keywords:</strong> Gaussian process, multi-fidelity modeling, physics-constrained surrogates, dimension reduction, limited data, high-dimensionality</p>
     </div>
     <div class="research-block">
       <h3>Forward and Inverse Uncertainty Quantification</h3>
       <p>Engineering systems are subject to various sources of uncertainty, and quantifying their effects is essential for reliable analysis and design. Our work in forward UQ focuses on efficiently propagating input uncertainties through complex models to estimate output statistics, failure probabilities, and sensitivity indices. In inverse UQ, we develop methods for calibrating model parameters and updating predictions using observational data through Bayesian inference frameworks. By leveraging surrogate models and advanced sampling techniques, we make these computationally demanding tasks feasible for real-world engineering applications.</p>
-      <img class="research-image" src="assets/research2.svg" alt="Forward and inverse uncertainty quantification research illustration">
-      <p class="keywords">Keywords: reliability analysis, stochastic simulation, subset simulation, Bayesian inference, Bayesian updating, sensitivity analysis, small failure probabilities</p>
+      <img class="research-image" src="assets/research2.png" alt="Forward and inverse uncertainty quantification research illustration">
+      <p class="keywords"><strong>Keywords:</strong> reliability analysis, advanced stochastic simulation, Bayesian inference, variational inference, generative model, sensitivity analysis, small failure probabilities</p>
     </div>
     <div class="research-block">
       <h3>Infrastructure Risk Assessment and Risk-informed Decision Making</h3>
       <p>Understanding how natural hazards affect large-scale infrastructure networks and making sound decisions to reduce that risk requires methods that can operate at the system level. We develop scalable computational frameworks for network-level risk assessment. Our work spans hazard types including earthquakes, hurricanes, and flooding, and infrastructure types including transportation networks and power systems. We are particularly interested in how risk insights can be translated into actionable decisions, such as bridge maintenance planning, retrofit prioritization, and resource allocation.</p>
       <img class="research-image research-image-compact" src="assets/research3.png" alt="Infrastructure risk assessment and risk-informed decision making research illustration">
-      <p class="keywords">Keywords: seismic risk, hurricane wind risk, transportation networks, bridge deterioration, Bayesian updating, graph neural networks, retrofit prioritization, equity-aware planning</p>
+      <p class="keywords"><strong>Keywords:</strong> seismic risk, hurricane wind risk, transportation networks, bridge deterioration, Bayesian updating, graph neural networks, retrofit prioritization, equity-aware planning</p>
     </div>
     <div class="research-block">
       <h3>Resilience of Interdependent Infrastructure Systems under Multi-hazards</h3>
       <p>Modern infrastructure systems do not fail in isolation. Disruptions in one system can cascade into others, and multiple hazard types can interact to produce compounding effects. We study the resilience of interdependent infrastructure networks, such as coupled power and transportation systems, under multi-hazard scenarios. Our research models how failures propagate across system boundaries and how the dynamic interaction between hazards and networks unfolds over time. This includes work on ice storm impacts on power-transportation systems, flood-transportation dynamic interactions, and recovery planning for interconnected systems.</p>
-      <p class="keywords">Keywords: power-transportation interdependency, ice storm resilience, flood modeling, cascading failure, recovery planning</p>
+      <img class="research-image" src="assets/research4.png" alt="Resilience of interdependent infrastructure systems under multi-hazards research illustration">
+      <p class="keywords"><strong>Keywords:</strong> power-transportation interdependency, ice storm resilience, flood modeling, cascading failure, recovery planning</p>
     </div>
   </div>
 </div>

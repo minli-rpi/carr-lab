@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>CARR Lab | Computation & AI for Infrastructure Risk and Resilience at RPI</title>
+<title>CARR Lab | Computation & AI for Risk and Resilience at RPI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --primary:#2B4C7E;--primary-light:#3D6098;--primary-dark:#1E3A5F;
-  --gold:#C7944A;--gold-light:#E8D5B0;
-  --bg:#FFFFFF;--bg-alt:#F7F8FA;--bg-hero:#EEF2F7;
-  --text:#2C2C2C;--text-sec:#5A5A5A;--text-muted:#8A8A8A;
-  --border:#DDE3EA;--border-light:#EDF0F4;
-  --sans:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;--serif:'Source Serif 4',Georgia,serif;
+  --primary:#2F5688;--primary-light:#4D6FA3;--primary-dark:#25476F;
+  --gold:#C6923E;--gold-light:#E6C98D;
+  --bg:#FFFFFF;--bg-alt:#F8FAFC;--bg-hero:#EAF0F7;
+  --text:#2B2F36;--text-sec:#5D5D5D;--text-muted:#8A8F98;
+  --border:#DDE5EF;--border-light:#EDF1F6;
+  --sans:'IBM Plex Sans',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;--serif:'Source Serif 4',Georgia,serif;
   --max-w:1060px;
-  --fs-hero:2.2rem;--fs-h1:2.08rem;--fs-h2:1.55rem;--fs-h3:1.24rem;
-  --fs-body:1rem;--fs-small:0.9rem;--fs-xs:0.78rem;--fs-avatar:1.3rem;
+  --fs-hero:2.12rem;--fs-h1:1.98rem;--fs-h2:1.56rem;--fs-h3:1.3rem;
+  --fs-body:1.02rem;--fs-small:0.91rem;--fs-xs:0.77rem;--fs-avatar:1.24rem;
   --lh:1.75;--section-pad:52px 24px;
 }
 html{scroll-behavior:smooth;font-size:16px}
@@ -28,13 +28,13 @@ a{color:var(--primary);text-decoration:none}
 a:hover{color:var(--gold);text-decoration:underline}
 
 /* NAV */
-nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px 6px rgba(0,0,0,0.1)}
+nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(47,86,136,0.18)}
 .nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:56px}
-.nav-logo{color:#fff;font-size:1.18rem;font-weight:700;letter-spacing:0.02em;text-decoration:none}
-.nav-logo span{color:var(--gold)}
+.nav-logo{color:#fff;font-size:1.18rem;font-weight:700;letter-spacing:0;text-decoration:none}
+.nav-logo span{color:var(--gold-light)}
 .nav-links{display:flex;gap:4px;list-style:none}
 .nav-links a{color:rgba(255,255,255,0.82);font-size:var(--fs-small);font-weight:500;padding:6px 12px;border-radius:4px;transition:all 0.2s;text-decoration:none}
-.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,0.12);text-decoration:none}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,0.14);text-decoration:none}
 .hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .hamburger span{display:block;width:22px;height:2px;background:#fff;margin:5px 0}
 
@@ -43,24 +43,16 @@ nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px
 .page-banner h1{font-family:var(--serif);color:var(--primary);font-size:var(--fs-h1);font-weight:700;margin-bottom:4px}
 .page-banner p{color:var(--text-sec);font-size:var(--fs-body)}
 
-/* HERO */
-.hero{background:var(--bg-hero);padding:48px 24px 44px;border-bottom:1px solid var(--border)}
-.hero-inner{max-width:var(--max-w);margin:0 auto}
-.hero h1{font-family:var(--serif);font-size:var(--fs-h1);font-weight:700;line-height:1.25;margin-bottom:20px;color:var(--primary)}
-.hero-body{display:grid;grid-template-columns:1fr 320px;gap:36px;align-items:start}
-.hero-text p{font-size:var(--fs-body);color:var(--text-sec);line-height:var(--lh);margin-bottom:12px}
-.hero-text p:last-child{margin-bottom:0}
-.hero-img{width:100%;border-radius:6px;background:#fff;display:flex;align-items:center;justify-content:center;min-height:260px;border:1px solid var(--border);overflow:hidden}
-.hero-graphic{display:block;width:100%;height:auto}
-.hero-graphic .line{fill:none;stroke:var(--primary);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-.hero-graphic .line-soft{fill:none;stroke:var(--primary-light);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;opacity:0.55}
-.hero-graphic .line-gold{fill:none;stroke:var(--gold);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-.hero-graphic .node{fill:#fff;stroke:var(--primary);stroke-width:1.8}
-.hero-graphic .node-gold{fill:var(--gold);stroke:#fff;stroke-width:1.8}
-.hero-graphic .fill-soft{fill:var(--bg-hero)}
-.hero-graphic .fill-primary{fill:var(--primary)}
-.hero-graphic .fill-gold{fill:var(--gold)}
-.hero-graphic text{font-family:var(--sans);fill:var(--text-sec);font-size:10px;font-weight:600;letter-spacing:0.04em}
+.hero{position:relative;overflow:hidden;background:url("assets/hero-risk-resilience.png") center/cover no-repeat;min-height:485px;padding:62px 24px 60px;border-bottom:1px solid var(--border)}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(47,86,136,0.9) 0%,rgba(47,82,120,0.78) 42%,rgba(47,82,120,0.34) 72%,rgba(47,82,120,0.18) 100%)}
+.hero-inner{position:relative;z-index:1;max-width:var(--max-w);margin:0 auto}
+.hero h1{font-family:var(--serif);font-size:var(--fs-h1);font-weight:700;line-height:1.25;margin-bottom:20px;color:#fff;max-width:680px;text-shadow:0 1px 12px rgba(0,0,0,0.28)}
+.hero-body{max-width:680px}
+.hero-text{max-width:660px}
+.hero-lede{font-family:var(--serif);font-size:1.22rem;color:rgba(255,255,255,0.94);line-height:1.62;margin-bottom:18px;text-shadow:0 1px 10px rgba(0,0,0,0.24)}
+.hero-text .intro-rule{width:72px;height:2px;background:var(--gold);margin:2px 0 18px}
+.hero-text p{font-size:var(--fs-body);color:rgba(255,255,255,0.82);line-height:var(--lh);margin-bottom:12px;text-shadow:0 1px 8px rgba(0,0,0,0.2)}
+.hero-text strong{color:#fff;font-weight:600}
 
 /* SECTIONS */
 .section{padding:var(--section-pad)}
@@ -79,7 +71,7 @@ nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px
 .news-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border-light);align-items:start}
 .news-item:last-child{border-bottom:none}
 .news-date-box{min-width:68px;text-align:center;background:var(--primary);color:#fff;border-radius:4px;padding:6px 10px}
-.news-date-box .month{font-size:var(--fs-xs);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.72)}
+.news-date-box .month{font-size:var(--fs-xs);font-weight:700;letter-spacing:0;text-transform:uppercase;color:rgba(255,255,255,0.72)}
 .news-date-box .year{font-size:var(--fs-body);font-weight:700;line-height:1.2}
 .news-content h3{font-size:var(--fs-body);font-weight:600;color:var(--text);margin-bottom:2px}
 .news-content p{font-size:var(--fs-small);color:var(--text-sec);margin:0}
@@ -103,7 +95,7 @@ nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px
 /* RESEARCH */
 .research-block{margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid var(--border-light)}
 .research-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.research-block h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);font-weight:600;margin-bottom:8px}
+.research-block h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);font-weight:700;margin-bottom:8px}
 .research-block p{font-size:var(--fs-body);line-height:var(--lh)}
 .keywords{margin-top:8px;font-size:var(--fs-small);color:var(--text-muted);font-style:italic}
 
@@ -127,31 +119,31 @@ nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 1px
 .member-list li{font-size:var(--fs-body);color:var(--text-sec);padding:3px 0 3px 18px;position:relative}
 .member-list li::before{content:'';position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:50%;background:var(--gold)}
 .join-box{margin-top:32px;padding:24px;background:var(--bg-alt);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:4px}
-.join-box h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);margin-bottom:6px}
+.join-box h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);font-weight:700;margin-bottom:6px}
 .join-box p{font-size:var(--fs-body);color:var(--text-sec);margin:0}
 
 /* TEACHING */
 .course-item{padding:18px 0;border-bottom:1px solid var(--border-light)}
 .course-item:last-child{border-bottom:none}
-.course-level{display:inline-block;font-size:var(--fs-xs);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:var(--primary);padding:2px 8px;border-radius:3px;margin-bottom:4px}
-.course-item h3{font-family:var(--serif);font-size:var(--fs-h3);font-weight:600;margin-bottom:2px}
+.course-level{display:inline-block;font-size:var(--fs-xs);font-weight:700;letter-spacing:0;text-transform:uppercase;color:#fff;background:var(--primary);padding:2px 8px;border-radius:3px;margin-bottom:4px}
+.course-item h3{font-family:var(--serif);font-size:var(--fs-h3);font-weight:700;color:var(--primary);margin-bottom:2px}
 .course-item .semesters{font-size:var(--fs-small);color:var(--text-muted);margin-bottom:6px}
 .course-item p{font-size:var(--fs-body);color:var(--text-sec)}
 
 /* CONTACT / OPPORTUNITIES */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.contact-info h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);margin-bottom:18px}
+.contact-info h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);font-weight:700;margin-bottom:18px}
 .contact-row{display:flex;gap:12px;margin-bottom:12px;align-items:start}
-.contact-label{font-size:var(--fs-small);font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;min-width:56px}
+.contact-label{font-size:var(--fs-small);font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0;min-width:56px}
 .contact-val{font-size:var(--fs-body);color:var(--text-sec)}
 .contact-val a{color:var(--primary)}
 .opp-box{padding:24px;background:var(--bg-alt);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:4px;margin-bottom:20px}
-.opp-box h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);margin-bottom:6px}
+.opp-box h3{font-family:var(--serif);font-size:var(--fs-h3);color:var(--primary);font-weight:700;margin-bottom:6px}
 .opp-box p{font-size:var(--fs-body);color:var(--text-sec);line-height:var(--lh);margin:0 0 8px}
 .opp-box p:last-child{margin-bottom:0}
 
 /* FOOTER */
-footer{background:var(--primary);color:rgba(255,255,255,0.6);padding:32px 24px;font-size:var(--fs-small)}
+footer{background:var(--primary-dark);color:rgba(255,255,255,0.6);padding:32px 24px;font-size:var(--fs-small)}
 .footer-inner{max-width:var(--max-w);margin:0 auto;text-align:center}
 footer a{color:rgba(255,255,255,0.78);text-decoration:none}
 footer a:hover{color:#fff;text-decoration:none}
@@ -167,8 +159,8 @@ footer a:hover{color:#fff;text-decoration:none}
   .nav-links{display:none}
   .nav-links.open{display:flex;flex-direction:column;position:absolute;top:56px;left:0;right:0;background:var(--primary);padding:16px 24px;gap:4px}
   .hamburger{display:block}
-  .hero-body{grid-template-columns:1fr}
-  .hero-img{max-width:280px}
+  .hero{min-height:auto;padding:48px 24px 46px;background-position:center right}
+  .hero::before{background:linear-gradient(90deg,rgba(47,86,136,0.94) 0%,rgba(47,82,120,0.86) 62%,rgba(47,82,120,0.58) 100%)}
   .about-grid{grid-template-columns:1fr}
   .about-photo{width:160px;height:200px}
   .contact-grid{grid-template-columns:1fr}
@@ -196,65 +188,13 @@ footer a:hover{color:#fff;text-decoration:none}
 
 <div class="hero">
   <div class="hero-inner">
-    <h1>Computation &amp; AI for Infrastructure Risk and Resilience</h1>
+    <h1>Computation &amp; AI for Risk and Resilience</h1>
     <div class="hero-body">
       <div class="hero-text">
-        <p>The increasing frequency and severity of natural hazards, combined with aging infrastructure and growing interdependencies among critical systems, pose significant challenges to the safety and functionality of civil infrastructure and the communities they serve.</p>
-        <p>The CARR Lab at Rensselaer Polytechnic Institute develops advanced computational methods to address these challenges. We advance surrogate modeling, machine learning, and probabilistic analysis techniques to enable efficient uncertainty quantification, risk assessment, and resilience-informed decision making for complex infrastructure systems. Our work bridges methodological innovation in computational modeling with real-world applications spanning transportation networks, power systems, and urban communities exposed to earthquakes, hurricanes, floods, and other extreme events.</p>
+        <p class="hero-lede">The increasing frequency and severity of natural hazards, combined with aging infrastructure and growing interdependencies among critical systems, pose significant challenges to the safety and functionality of civil infrastructure and the communities they serve.</p>
+        <div class="intro-rule" aria-hidden="true"></div>
+        <p>The CARR Lab at Rensselaer Polytechnic Institute develops advanced computational methods to address these challenges. We advance <strong>surrogate modeling, machine learning, and probabilistic analysis techniques</strong> to enable efficient uncertainty quantification, risk assessment, and resilience-informed decision making for complex infrastructure systems. Our work bridges methodological innovation in computational modeling with real-world applications spanning transportation networks, power systems, and urban communities exposed to earthquakes, hurricanes, floods, and other extreme events.</p>
       </div>
-<div class="hero-img" aria-label="CARR Lab Research Overview Framework">
-  <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-    <rect width="400" height="300" fill="#ffffff"/>
-    
-    <text x="20" y="30" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#8A8A8A" letter-spacing="1">NATURAL HAZARDS</text>
-    <text x="145" y="30" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#2B4C7E" letter-spacing="1">COMPUTATION & AI CORE</text>
-    <text x="285" y="30" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#8A8A8A" letter-spacing="1">RESILIENT SYSTEMS</text>
-
-    <g transform="translate(20, 50)">
-      <rect x="0" y="0" width="80" height="200" rx="6" fill="#F7F8FA" stroke="#DDE3EA" stroke-width="1"/>
-      <circle cx="40" cy="40" r="15" fill="#E8D5B0" opacity="0.3"/>
-      <text x="40" y="44" font-family="Inter" font-size="8" text-anchor="middle" fill="#C7944A">Seismic</text>
-      <circle cx="40" cy="100" r="15" fill="#E8D5B0" opacity="0.3"/>
-      <text x="40" y="104" font-family="Inter" font-size="8" text-anchor="middle" fill="#C7944A">Hurricane</text>
-      <circle cx="40" cy="160" r="15" fill="#E8D5B0" opacity="0.3"/>
-      <text x="40" y="164" font-family="Inter" font-size="8" text-anchor="middle" fill="#C7944A">Wildfire</text>
-    </g>
-
-    <path d="M100 150 Q120 150 140 150" stroke="#DDE3EA" fill="none" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-    <g transform="translate(130, 60)">
-      <rect x="0" y="0" width="140" height="180" rx="8" fill="#2B4C7E" />
-      <circle cx="30" cy="40" r="4" fill="#fff" />
-      <circle cx="30" cy="70" r="4" fill="#fff" />
-      <circle cx="30" cy="100" r="4" fill="#fff" />
-      <circle cx="70" cy="55" r="4" fill="#C7944A" />
-      <circle cx="70" cy="85" r="4" fill="#C7944A" />
-      <circle cx="110" cy="70" r="4" fill="#fff" />
-      <path d="M34 40 L66 55 M34 70 L66 55 M34 70 L66 85 M34 100 L66 85 M74 55 L106 70 M74 85 L106 70" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
-      
-      <text x="70" y="135" font-family="Inter" font-size="9" font-weight="600" text-anchor="middle" fill="#fff">Surrogate Models</text>
-      <text x="70" y="150" font-family="Inter" font-size="9" font-weight="600" text-anchor="middle" fill="#fff">(GNN / FNO / UQ)</text>
-      <text x="70" y="165" font-family="Inter" font-size="8" text-anchor="middle" fill="rgba(255,255,255,0.7)">Physics-Informed ML</text>
-    </g>
-
-    <path d="M270 150 Q285 150 300 150" stroke="#DDE3EA" fill="none" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-    <g transform="translate(300, 50)">
-      <rect x="0" y="0" width="80" height="200" rx="6" fill="#F7F8FA" stroke="#DDE3EA" stroke-width="1"/>
-      <path d="M20 50 L40 30 L60 50 L40 70 Z" fill="none" stroke="#2B4C7E" stroke-width="1.5"/>
-      <text x="40" y="90" font-family="Inter" font-size="8" text-anchor="middle" fill="#2B4C7E" font-weight="600">Transport</text>
-      
-      <path d="M20 140 H60 L50 170 L30 170 L20 140" fill="none" stroke="#C7944A" stroke-width="1.5"/>
-      <text x="40" y="185" font-family="Inter" font-size="8" text-anchor="middle" fill="#2B4C7E" font-weight="600">Resilience</text>
-    </g>
-
-    <defs>
-      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-        <polygon points="0 0, 10 3.5, 0 7" fill="#DDE3EA" />
-      </marker>
-    </defs>
-  </svg>
-</div>
     </div>
   </div>
 </div>
