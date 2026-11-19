@@ -35,21 +35,12 @@
   .about-photo{width:160px;height:200px}
 }
 .pub-section{margin-bottom:40px}
-.pub-section h3{font-family:var(--serif);font-size:var(--fs-h2);font-weight:700;color:var(--primary);margin-bottom:4px;padding-bottom:8px;border-bottom:1px solid var(--border)}
-.pub-year{display:grid;grid-template-columns:110px 1fr;gap:24px;padding:14px 0;border-bottom:1px solid var(--border-light)}
-.pub-year:last-child{border-bottom:none}
-.pub-year-label{font-family:var(--serif);font-size:var(--fs-body);font-weight:700;color:var(--gold);line-height:1.6}
-.pub-item{margin-bottom:12px;line-height:1.6}
-.pub-item:last-child{margin-bottom:0}
-.pub-title{font-size:var(--fs-body);color:var(--text);font-weight:500}
-.pub-title a{color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-light)}
-.pub-title a:hover{color:var(--primary);border-bottom-color:var(--primary)}
-.pub-meta{font-size:var(--fs-small);color:var(--text-muted)}
-.pub-meta strong{color:var(--text-sec);font-weight:600}
-.pub-meta em{color:var(--text-sec)}
-@media(max-width:600px){
-  .pub-year{grid-template-columns:1fr;gap:6px}
-}
+.pub-section h3{font-family:var(--serif);font-size:var(--fs-h2);font-weight:700;color:var(--primary);margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.pub-list{list-style:none;margin:0;padding:0}
+.pub-item{display:grid;grid-template-columns:36px 1fr;gap:4px;padding:8px 0;line-height:1.65}
+.pub-num{color:var(--text-muted)}
+.pub-item a{color:inherit;text-decoration:none;border-bottom:1px solid var(--gold-light)}
+.pub-item a:hover{color:var(--primary);border-bottom-color:var(--primary)}
 </style>
 </head>
 <body>
@@ -76,51 +67,35 @@
   <div class="container">
     <section class="pub-section">
       <h3>Under Review</h3>
-      <div class="pub-year"><div class="pub-year-label">2026</div><div>
-        <div class="pub-item"><div class="pub-title">Variational sequence learning for nonlinear response history metamodeling with aleatoric and epistemic uncertainty</div><div class="pub-meta">Sapkota, M., <strong>Li, M.</strong>, &amp; Li, B.</div></div>
-        <div class="pub-item"><div class="pub-title">Reliability assessment of a low-rise structure under wind loading: Implications for serviceability reliability and the wind directionality factor</div><div class="pub-meta">Adhikari, M., Letchford, C., &amp; <strong>Li, M.</strong></div></div>
-        <div class="pub-item"><div class="pub-title">Resilience assessment and enhancement of interdependent power distribution and transportation systems under ice storms</div><div class="pub-meta">Hou, G., Pathak, S., &amp; <strong>Li, M.</strong></div></div>
-        <div class="pub-item"><div class="pub-title">Bridge retrofit prioritization for seismic risk mitigation of transportation networks using graph neural Bayesian optimization</div><div class="pub-meta">Pathak, S., <strong>Li, M.</strong>, &amp; Zou, Q.</div></div>
-      </div></div>
+      <ol class="pub-list">
+        <li class="pub-item"><span class="pub-num">[1]</span><span>Sapkota, M., <strong>Li, M.</strong>, &amp; Li, B. Variational sequence learning for nonlinear response history metamodeling with aleatoric and epistemic uncertainty.</span></li>
+        <li class="pub-item"><span class="pub-num">[2]</span><span>Adhikari, M., Letchford, C., &amp; <strong>Li, M.</strong> Reliability assessment of a low-rise structure under wind loading: Implications for serviceability reliability and the wind directionality factor.</span></li>
+        <li class="pub-item"><span class="pub-num">[3]</span><span>Hou, G., Pathak, S., &amp; <strong>Li, M.</strong> Resilience assessment and enhancement of interdependent power distribution and transportation systems under ice storms.</span></li>
+        <li class="pub-item"><span class="pub-num">[4]</span><span>Pathak, S., <strong>Li, M.</strong>, &amp; Zou, Q. Bridge retrofit prioritization for seismic risk mitigation of transportation networks using graph neural Bayesian optimization.</span></li>
+      </ol>
     </section>
     <section class="pub-section">
       <h3>Journal Articles</h3>
-      <div class="pub-year"><div class="pub-year-label">2024</div><div>
-        <div class="pub-item"><div class="pub-title"><a href="https://doi.org/10.1016/j.strusafe.2023.102397">A multi-fidelity stochastic simulation scheme for estimation of small failure probabilities</a></div><div class="pub-meta"><strong>Li, M.</strong>, Arunachalam, S., &amp; Spence, S. M. &middot; <em>Structural Safety</em>, 106, 102397</div></div>
-      </div></div>
-      <div class="pub-year"><div class="pub-year-label">2023</div><div>
-        <div class="pub-item"><div class="pub-title"><a href="https://doi.org/10.1016/j.apm.2023.03.003">Physics-constrained Gaussian process model for prediction of hydrodynamic interactions between wave energy converters in an array</a></div><div class="pub-meta"><strong>Li, M.</strong>, Jia, G., Mahmoud, H., Yu, Y. H., &amp; Tom, N. &middot; <em>Applied Mathematical Modelling</em>, 119, 465-485</div></div>
-      </div></div>
-      <div class="pub-year"><div class="pub-year-label">2022</div><div>
-        <div class="pub-item"><div class="pub-title"><a href="https://doi.org/10.1016/j.euromechsol.2022.104547">Adaptive Gaussian process with PCA for prediction of complex dispersion relations for periodic structures</a></div><div class="pub-meta">Cheng, Z., <strong>Li, M.</strong>, Jia, G., &amp; Shi, Z. &middot; <em>European Journal of Mechanics-A/Solids</em>, 93, 104547</div></div>
-      </div></div>
-      <div class="pub-year"><div class="pub-year-label">2021</div><div>
-        <div class="pub-item"><div class="pub-title"><a href="https://doi.org/10.1016/j.compstruct.2020.113254">Generative adversarial network guided topology optimization of periodic structures via Subset Simulation</a></div><div class="pub-meta"><strong>Li, M.</strong>, Jia, G., Cheng, Z., &amp; Shi, Z. &middot; <em>Composite Structures</em>, 260, 113254</div></div>
-      </div></div>
-      <div class="pub-year"><div class="pub-year-label">2020</div><div>
-        <div class="pub-item"><div class="pub-title"><a href="https://doi.org/10.1061/(asce)be.1943-5592.0001530">Bayesian updating of bridge condition deterioration models using complete and incomplete inspection data</a></div><div class="pub-meta"><strong>Li, M.</strong>, &amp; Jia, G. &middot; <em>Journal of Bridge Engineering</em>, 25(3), 04020007</div></div>
-        <div class="pub-item"><div class="pub-title"><a href="https://doi.org/10.1016/j.ress.2019.106725">Efficient dimension reduction and surrogate-based sensitivity analysis for expensive models with high-dimensional outputs</a></div><div class="pub-meta"><strong>Li, M.</strong>, Wang, R-Q., &amp; Jia, G. &middot; <em>Reliability Engineering &amp; System Safety</em>, 195, 106725</div></div>
-        <div class="pub-item"><div class="pub-title"><a href="https://doi.org/10.1061/(asce)st.1943-541x.0002531">Multi-fidelity Gaussian process model integrating low- and high-fidelity data considering censoring</a></div><div class="pub-meta"><strong>Li, M.</strong>, &amp; Jia, G. &middot; <em>Journal of Structural Engineering</em>, 146(3), 04019215</div></div>
-      </div></div>
-      <div class="pub-year"><div class="pub-year-label">2019</div><div>
-        <div class="pub-item"><div class="pub-title"><a href="https://doi.org/10.1016/j.compstruct.2019.111385">Dimension reduction and surrogate based topology optimization of periodic structures</a></div><div class="pub-meta"><strong>Li, M.</strong>, Cheng, Z., Jia, G., &amp; Shi, Z. &middot; <em>Composite Structures</em>, 229, 111385</div></div>
-      </div></div>
+      <ol class="pub-list">
+        <li class="pub-item"><span class="pub-num">[1]</span><span><strong>Li, M.</strong>, Arunachalam, S., &amp; Spence, S. M. (2024). <a href="https://doi.org/10.1016/j.strusafe.2023.102397">A multi-fidelity stochastic simulation scheme for estimation of small failure probabilities</a>. <span><em>Structural Safety</em>, 106, 102397</span>.</span></li>
+        <li class="pub-item"><span class="pub-num">[2]</span><span><strong>Li, M.</strong>, Jia, G., Mahmoud, H., Yu, Y. H., &amp; Tom, N. (2023). <a href="https://doi.org/10.1016/j.apm.2023.03.003">Physics-constrained Gaussian process model for prediction of hydrodynamic interactions between wave energy converters in an array</a>. <span><em>Applied Mathematical Modelling</em>, 119, 465-485</span>.</span></li>
+        <li class="pub-item"><span class="pub-num">[3]</span><span>Cheng, Z., <strong>Li, M.</strong>, Jia, G., &amp; Shi, Z. (2022). <a href="https://doi.org/10.1016/j.euromechsol.2022.104547">Adaptive Gaussian process with PCA for prediction of complex dispersion relations for periodic structures</a>. <span><em>European Journal of Mechanics-A/Solids</em>, 93, 104547</span>.</span></li>
+        <li class="pub-item"><span class="pub-num">[4]</span><span><strong>Li, M.</strong>, Jia, G., Cheng, Z., &amp; Shi, Z. (2021). <a href="https://doi.org/10.1016/j.compstruct.2020.113254">Generative adversarial network guided topology optimization of periodic structures via Subset Simulation</a>. <span><em>Composite Structures</em>, 260, 113254</span>.</span></li>
+        <li class="pub-item"><span class="pub-num">[5]</span><span><strong>Li, M.</strong>, &amp; Jia, G. (2020). <a href="https://doi.org/10.1061/(asce)be.1943-5592.0001530">Bayesian updating of bridge condition deterioration models using complete and incomplete inspection data</a>. <span><em>Journal of Bridge Engineering</em>, 25(3), 04020007</span>.</span></li>
+        <li class="pub-item"><span class="pub-num">[6]</span><span><strong>Li, M.</strong>, Wang, R-Q., &amp; Jia, G. (2020). <a href="https://doi.org/10.1016/j.ress.2019.106725">Efficient dimension reduction and surrogate-based sensitivity analysis for expensive models with high-dimensional outputs</a>. <span><em>Reliability Engineering &amp; System Safety</em>, 195, 106725</span>.</span></li>
+        <li class="pub-item"><span class="pub-num">[7]</span><span><strong>Li, M.</strong>, &amp; Jia, G. (2020). <a href="https://doi.org/10.1061/(asce)st.1943-541x.0002531">Multi-fidelity Gaussian process model integrating low- and high-fidelity data considering censoring</a>. <span><em>Journal of Structural Engineering</em>, 146(3), 04019215</span>.</span></li>
+        <li class="pub-item"><span class="pub-num">[8]</span><span><strong>Li, M.</strong>, Cheng, Z., Jia, G., &amp; Shi, Z. (2019). <a href="https://doi.org/10.1016/j.compstruct.2019.111385">Dimension reduction and surrogate based topology optimization of periodic structures</a>. <span><em>Composite Structures</em>, 229, 111385</span>.</span></li>
+      </ol>
     </section>
     <section class="pub-section">
       <h3>Conference Papers</h3>
-      <div class="pub-year"><div class="pub-year-label">2023</div><div>
-        <div class="pub-item"><div class="pub-title">Multi-fidelity information fusion for efficient estimation of small failure probabilities considering multiple limit states</div><div class="pub-meta"><strong>Li, M.</strong>, Arunachalam, S., &amp; Spence, S. M. &middot; <em>ICASP14</em>, Dublin, Ireland</div></div>
-      </div></div>
-      <div class="pub-year"><div class="pub-year-label">2022</div><div>
-        <div class="pub-item"><div class="pub-title">Convolution-fed Gaussian process with active learning for probabilistic power prediction of large-scale wave farm</div><div class="pub-meta"><strong>Li, M.</strong>, Jia, G., Mahmoud, H., Yu, Y-H., &amp; Tom, N. &middot; <em>ICOSSAR 2021-2022</em>, Shanghai, China</div></div>
-        <div class="pub-item"><div class="pub-title">Multi-fidelity surrogate model for efficient tsunami evacuation risk assessment</div><div class="pub-meta"><strong>Li, M.</strong>, Wang, Z., &amp; Jia, G. &middot; <em>ICOSSAR 2021-2022</em>, Shanghai, China</div></div>
-      </div></div>
-      <div class="pub-year"><div class="pub-year-label">2021</div><div>
-        <div class="pub-item"><div class="pub-title"><a href="https://doi.org/10.1201/9780429279119-377">Age, state, and environment dependent non-homogeneous stochastic model for improved bridge deterioration prediction</a></div><div class="pub-meta"><strong>Li, M.</strong>, &amp; Jia, G. &middot; <em>IABMAS 2021</em>, Sapporo, Japan</div></div>
-      </div></div>
-      <div class="pub-year"><div class="pub-year-label">2019</div><div>
-        <div class="pub-item"><div class="pub-title">Surrogate modeling for sensitivity analysis of models with high-dimensional outputs</div><div class="pub-meta"><strong>Li, M.</strong>, Jia, G., &amp; Wang, R-Q. &middot; <em>ICASP13</em>, Seoul, South Korea</div></div>
-      </div></div>
+      <ol class="pub-list">
+        <li class="pub-item"><span class="pub-num">[1]</span><span><strong>Li, M.</strong>, Arunachalam, S., &amp; Spence, S. M. (2023). Multi-fidelity information fusion for efficient estimation of small failure probabilities considering multiple limit states. <span><em>ICASP14</em>, Dublin, Ireland</span>.</span></li>
+        <li class="pub-item"><span class="pub-num">[2]</span><span><strong>Li, M.</strong>, Jia, G., Mahmoud, H., Yu, Y-H., &amp; Tom, N. (2022). Convolution-fed Gaussian process with active learning for probabilistic power prediction of large-scale wave farm. <span><em>ICOSSAR 2021-2022</em>, Shanghai, China</span>.</span></li>
+        <li class="pub-item"><span class="pub-num">[3]</span><span><strong>Li, M.</strong>, Wang, Z., &amp; Jia, G. (2022). Multi-fidelity surrogate model for efficient tsunami evacuation risk assessment. <span><em>ICOSSAR 2021-2022</em>, Shanghai, China</span>.</span></li>
+        <li class="pub-item"><span class="pub-num">[4]</span><span><strong>Li, M.</strong>, &amp; Jia, G. (2021). <a href="https://doi.org/10.1201/9780429279119-377">Age, state, and environment dependent non-homogeneous stochastic model for improved bridge deterioration prediction</a>. <span><em>IABMAS 2021</em>, Sapporo, Japan</span>.</span></li>
+        <li class="pub-item"><span class="pub-num">[5]</span><span><strong>Li, M.</strong>, Jia, G., &amp; Wang, R-Q. (2019). Surrogate modeling for sensitivity analysis of models with high-dimensional outputs. <span><em>ICASP13</em>, Seoul, South Korea</span>.</span></li>
+      </ol>
     </section>
   </div>
 </div>
